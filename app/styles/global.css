@@ -1,0 +1,89 @@
+/***** goal ****** */
+main {
+  display: block;
+  margin: 0;
+  padding: 0; }
+
+a, a:visited, a:link {
+  text-decoration: none;
+  color: #5d5d5d;
+  border-color: #5d5d5d; }
+
+a:hover, a:active {
+  text-decoration: none;
+  color: #bababa;
+  color: #c97260;
+  border-color: #c97260; }
+
+.btn, .btn:visited, .btn:link, a.btn, a.btn :visited, a.btn:link {
+  padding: 10px 20px;
+  border: 2px solid #222;
+  text-transform: uppercase;
+  color: #222;
+  display: inline-block;
+  margin: 10px auto;
+  width: auto;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400; }
+
+p {
+  color: #5d5d5d;
+  line-height: 1.5em; }
+
+.color_title {
+  color: #222;
+  white-space: break;
+  word-wrap: break-word; }
+
+.title {
+  color: #566366;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  text-transform: uppercase; }
+
+.hidden {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  border: 0; }
+
+h6.title {
+  font-size: 1.2em; }
+
+body {
+  height: 100%; }
+
+.wrap {
+  width: 100%;
+  overflow: hidden; }
+
+.main {
+  position: relative;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  box-sizing: border-box;
+  height: 100%; }
+
+.cell {
+  background-repeat: no-repeat; }
+
+.transition_all, .main {
+  transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+  -khtml-transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  -ms-transition: all 0.6s;
+  -o-transition: all 0.6s; }
+
+.navbar-toggle {
+  background-color: #c97260;
+  opacity: 0.6;
+  margin: 3px; }
+
+.navbar-toggle .icon-bar {
+  background-color: #fff; }
+
+/*# sourceMappingURL=global.css.map */

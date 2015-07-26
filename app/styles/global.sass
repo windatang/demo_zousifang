@@ -1,0 +1,149 @@
+@charset "UTF-8"
+$width: 700
+$height: 700
+$deg: 90deg
+$hover_color: #c97260
+$color_content: #5d5d5d
+$title_color: #222
+$bac_color: #f2f2f1
+$content_title: #566366
+$small-left: 20px
+
+=action($method,$param)
+ #{$method}: $param
+ -webkit-#{$method}: $param
+ -khtml-#{$method}: $param
+ -moz-#{$method}: $param
+ -ms-#{$method}: $param
+ -o-#{$method}: $param
+
+=roboto($num)
+ font-family: 'Roboto', sans-serif
+ font-weight: $num
+
+=size()
+ width: #{$width}px
+ height: #{$height}px
+ position: absolute
+
+=flex-row($flex-wrap,$jusity-content,$align-items,$align-self,$align-content)
+ display: flex
+ flex-flow: row
+ flex-wrap: #{$flex-wrap}
+ justify-content: #{$jusity-content}
+ align-self: #{$align-self}
+ align-items: #{$align-items}
+ align-content: #{$align-content}
+
+=flex-column($flex-wrap,$jusity-content,$align-items,$align-self,$align-content)
+ display: flex
+ flex-flow: column
+ flex-wrap: #{$flex-wrap}
+ justify-content: #{$jusity-content}
+ align-self: #{$align-self}
+ align-items: #{$align-items}
+ align-content: #{$align-content}
+
+
+=keyframes($name)
+ @-o-keyframes #{$name}
+  @content
+ @-moz-keyframes #{$name}
+  @content
+ @-webkit-keyframes #{$name}
+  @content
+ @-ms-keyframes #{$name}
+  @content
+ @keyframes #{$name}
+  @content
+
+=hidden()
+ visibility: hidden
+ height: 0
+ width: 0
+ overflow: hidden
+=display()
+ visibility: visible
+ height: auto
+ width: auto
+ overflow: visible
+/****** goal *******/
+main
+ display: block
+ margin: 0
+ padding: 0
+a,a:visited,a:link
+ text-decoration: none
+ color: $color_content
+ border-color: $color_content
+
+a:hover,a:active
+ text-decoration: none
+ color: #bababa
+ color: $hover_color
+ border-color: $hover_color
+
+.btn,.btn:visited,.btn:link,a.btn,a.btn :visited,a.btn:link
+ padding: 10px 20px
+ border: 2px solid $title_color
+ text-transform: uppercase
+ color: $title_color
+ display: inline-block
+ margin: 10px auto
+ width: auto
+ +roboto(400)
+
+p
+ color: $color_content
+ line-height: 1.5em
+.color_title
+ color: #222
+ white-space: break
+ word-wrap: break-word
+
+.title
+ color: $content_title
+ +roboto(400)
+ font-size: 1.5em
+ text-transform: uppercase
+
+.hidden
+ height: 0
+ width: 0
+ overflow: hidden
+ border: 0
+
+h6.title
+ font-size: 1.2em
+body
+ height: 100%
+.wrap
+ width: 100%
+ overflow: hidden
+
+.main
+ position: relative
+ margin: 0 auto
+ background-size: cover
+ background-position: 50% 50%
+ background-attachment: fixed
+ //min-height: 660px
+ box-sizing: border-box
+ height: 100%
+ @extend .transition_all
+
+.cell
+ background-repeat: no-repeat
+
+.transition_all
+ +action(transition,all .6s)
+
+.navbar-toggle
+ background-color: $hover_color
+ opacity: .6
+ margin: 3px
+.navbar-toggle .icon-bar
+ background-color: #fff
+
+
+

@@ -1,0 +1,27 @@
+<main class="container" >
+	 <h2>{{data.h2_title}}</h2>
+	<ruby>由css 实现hover</ruby>
+	<nav id="nav_conturys" class="nav transition_all" role="banner">
+		<main class="container">
+			<h3>{{data.menu_tiitle}}</h3>
+			<menu class="collapse navbar-collapse bs-navbar-collapse transition_all">
+				<ul class="nav navbar-nav navbar-right navbar-levelI">
+					<li class="mod_menu_item mod_contiend" ng-repeat="continent in data.continents" >
+						  <section class="container">
+								<h4>{{continent.contient}}</h4>
+								<!--<p><a ng-repeat="items in continent.countries"></a></p>-->
+								<menu class="menu_levelII">
+									<ul class="clearfix">
+										 <li ng-repeat="item in continent.countries|limitTo:5" ><a href="#" alt="{{item}}">{{item}}</a> </li>
+									</ul>
+								</menu>
+						  </section>
+							<div class="mod_subView hidden {{continent.class}} transition_all">
+
+							</div>
+					</li>
+				</ul>
+			</menu>
+		</main>
+	</nav>
+</main>

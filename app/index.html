@@ -1,0 +1,115 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+		<!-- bower:css -->
+		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" >-->
+		<!-- endbower -->
+    <!-- endbuild -->
+		<!-- build:css(.tmp) styles/global.css -->
+		<link rel="stylesheet" href="styles/global.css">
+		<!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+		<link rel="stylesheet" href="styles/main.css">
+		<link rel="stylesheet" href="styles/navigation.css">
+		<link rel="stylesheet" href="styles/show.css">
+		<link rel="stylesheet" href="styles/tab.css">
+		<!-- endbuild -->
+
+  </head>
+  <body ng-app="demoApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- Add your site or application content here -->
+		<div class="wrap"  ng-controller="MainCtrl">
+			<header id="main_header" class="header">
+				<main class="container">
+					<h1>{{data.h1_title}}</h1>
+					<a class="logo" atl="{{h1_title}}"  href="http://www.usitrip.com/">{{data.h1_title}}</a>
+					<p> 本页面需要在http 协议下运行, 不支持file协议</p>
+				</main>
+			</header>
+			<nav id="main_nav" class="nav nav-pills pull-right ">
+				<main class="container">
+					<p>
+						<span>router:</span> </p>
+					<ul class="clearfix" >
+						<li ng-repeat="item in data.navs" ><a ng-href="{{item.route}}" >{{item.name}}</a></li>
+						<!--<li><a href="#Show"></a>{{show}}</li>-->
+						<!--<li><a href="#Tab"></a>{{tab}}</li>-->
+					</ul>
+					<p class="btn ex_language"><a href="javascript:void(0);" ng-click="setLanguage()" alt="change language">{{data.language}}</a></p>
+				</main>
+			</nav>
+			<main id="main_content" ng-view>
+
+		  </main>
+		</div>
+
+
+
+			<!--<div class="header">-->
+				<!--<ul class="">-->
+					<!--<li class="active"><a ng-href="#">Home</a></li>-->
+					<!--<li><a ng-href="#/about">About</a></li>-->
+					<!--<li><a ng-href="#">Contact</a></li>-->
+				<!--</ul>-->
+				<!--<h3 class="text-muted">demo</h3>-->
+			<!--</div>-->
+
+      <div id="main_footer" class="footer">
+				<div class="container">
+        	<p><span class="glyphicon glyphicon-heart"></span> Powered by Angular js | bootstrape </p>
+					<p><span class="glyphicon glyphicon-heart"></span> Designed by Dazhi Tang </p>
+				</div>
+      </div>
+    </div>
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/oldieshim.js -->
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+    <!-- endbuild -->
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+		<!-- build:js js/app.js -->
+		<script src="scripts/app.js"></script>
+		<script src="scripts/controllers/directive.js"></script>
+		<script src="scripts/controllers/main.js"></script>
+		<script src="scripts/controllers/navigation.js"></script>
+		<script src="scripts/controllers/show.js"></script>
+		<script src="scripts/controllers/tab.js"></script>
+		<!-- endbuild -->
+	<script>
+
+	</script>
+</body>
+</html>

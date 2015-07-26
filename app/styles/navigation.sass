@@ -1,0 +1,167 @@
+=action($method,$param)
+ #{$method}: $param
+ -webkit-#{$method}: $param
+ -khtml-#{$method}: $param
+ -moz-#{$method}: $param
+ -ms-#{$method}: $param
+ -o-#{$method}: $param
+
+$width: 700
+$height: 700
+$deg: 90deg
+$color_blue:#58aff6
+$color_white:#EEEEEE
+$color_lab:#ff6682
+$hover_color: #c97260
+$color_content: #5d5d5d
+$title_color: #ff6682
+$bac_color: #f2f2f1
+$content_title: #566366
+$small-left: 20px
+
+//=roboto($num)
+// font-family: 'Roboto', sans-serif
+// font-weight: $num
+//
+//=size()
+// width: #{$width}px
+// height: #{$height}px
+// position: absolute
+//
+//=flex-row($flex-wrap,$jusity-content,$align-items,$align-self,$align-content)
+// display: flex
+// flex-flow: row
+// flex-wrap: #{$flex-wrap}
+// justify-content: #{$jusity-content}
+// align-self: #{$align-self}
+// align-items: #{$align-items}
+// align-content: #{$align-content}
+//
+//=flex-column($flex-wrap,$jusity-content,$align-items,$align-self,$align-content)
+// display: flex
+// flex-flow: column
+// flex-wrap: #{$flex-wrap}
+// justify-content: #{$jusity-content}
+// align-self: #{$align-self}
+// align-items: #{$align-items}
+// align-content: #{$align-content}
+//
+//
+//=keyframes($name)
+// @-o-keyframes #{$name}
+//  @content
+// @-moz-keyframes #{$name}
+//  @content
+// @-webkit-keyframes #{$name}
+//  @content
+// @-ms-keyframes #{$name}
+//  @content
+// @keyframes #{$name}
+//  @content
+//
+//=hidden()
+// visibility: hidden
+// height: 0
+// width: 0
+// overflow: hidden
+//=display()
+// visibility: visible
+// height: auto
+// width: auto
+// overflow: visible
+
+
+#nav_conturys
+ .container
+  border: 2px solid $color_blue
+  position: relative
+  h3
+   background-color: $color_blue
+   margin: 0
+   text-align: center
+   text-indent: 2em
+   line-height: 3em
+   height: 3em
+   font-size: 1.2em
+   color: #FEFEFE
+  menu
+   width: 90%
+   padding: 0
+   margin: 0 auto
+
+  .navbar-levelI
+   margin: 0
+   padding: 0
+   .mod_contiend
+    float: none
+    clear: both
+    margin: 0
+    padding: 0
+    border-bottom: 1px solid #e5e5e5
+    .container
+     position: relative
+     padding: 0.5em 0
+     border: 0
+     &:last-child
+      border-bottom: 0px
+     &:after
+      content: ''
+      //font-size: 2em
+      position: absolute
+      display: block
+      height: 10px
+      width: 10px
+      border-bottom: 2px solid #e5e5e5
+      border-left: 2px solid #e5e5e5
+      right: 0
+      top: 50%
+      +action(transform,translateY(-50%) rotate(-135deg))
+    &:hover .container:after
+     border-bottom: 2px solid $hover_color
+     border-left: 2px solid $hover_color
+    h4
+     color: $color_blue
+     font-size: 1.2em
+     margin: 0
+     line-height: 2em
+    .menu_levelII
+     margin: 0
+     ul
+      padding: 0
+      line-height: 2em
+      margin-left: -8px
+  .mod_subView
+   position: relative
+   &.hidden
+    border: 0
+  .mod_contiend:hover .mod_subView.hidden
+   background-color: #00b3ee
+   display: block
+   height: 300px
+   width: 100%
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px)
+ #nav_conturys
+  .container
+   .mod_subView
+    position: absolute
+    top: -2px
+    left: 400px
+    margin-left: -4px
+   .mod_contiend:hover .mod_subView.hidden
+    background-color: #f8f3dc
+    border: 2px solid $color_blue
+    height: 100%
+    width: 800px
+    &.mod_subView4, &.mod_subView5
+     bottom: -2px
+     top: initial
+    &.mod_subView2, &.mod_subView5
+     width: 800px
+     height: 400px
+
+
+
+

@@ -1,0 +1,30 @@
+<main class="container mod_tab_container" >
+	<h2>{{data.h2_title}}</h2>
+	<ruby><p>复用代码show.js</p></ruby>
+	<section id="image_show">
+		<main class="container">
+			<h4>{{data.lab_title}}</h4>
+			<tabs class="mod_tab clearfix">
+				<pane class="mob_tab_lab" ng-repeat="item in data.locations" title="{{item.location}}">
+					<div class="mod_tab_content {{item.layout}}  clearfix">
+						<section class=" layout"  >
+
+							<div ng-repeat="image in item.show_list|limitTo:12"   class="flexitem" >
+
+								<a href="javascript:void(0)">
+									<img src="{{image.src}}" alt="{{image.describe}}" height="{{image.height}}" width="{{image.width}}">
+									<article class="hidden">
+										<p>{{image.describe}}</p>
+									</article>
+								</a>
+							</div>
+
+
+						</section>
+					</div>
+				</pane>
+			</tabs>
+		</main>
+	</section>
+
+</main>
